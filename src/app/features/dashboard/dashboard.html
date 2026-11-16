@@ -1,0 +1,18 @@
+<h2>Employee Dashboard</h2>
+
+<p>Welcome to the Employee Management Portal!</p>
+
+<p>
+    Logged-in Role:
+    {{ authService.userRole() }}
+</p>
+
+<nav>
+    <a routerLink="/employees">Employees</a>
+
+    @if(authService.userRole() === 'admin') {
+    <a routerLink="/admin">Admin Dashboard</a>
+    }
+
+    <button (click)="logout()">Logout</button>
+</nav>

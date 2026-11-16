@@ -1,0 +1,22 @@
+<h2>Employee Portal Login</h2>
+
+<form (ngSubmit)="login()">
+
+    <div>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" [(ngModel)]="username" required>
+    </div>
+
+    <div>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" [(ngModel)]="password" required>
+    </div>
+    <button type="submit">Login</button>
+
+    @if(errorMessage) {
+    <p>{{ errorMessage }}</p>
+    }
+</form>
+
+<p>Admin: admin / admin</p>
+<p>Employee: employee / employee</p>
